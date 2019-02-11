@@ -7,7 +7,9 @@ class Post < ActiveRecord::Base
   
   
   def clickbait
-    if expiration_date.present? && expiration_date < Date.today
+    @posts = Post.all
+    @post.each do |post| 
+      if
       errors.add(:title, "need to more clickbait-y")
     end
   end
