@@ -7,7 +7,8 @@ class Post < ActiveRecord::Base
   
   
   def clickbait
-    @post
+    @post = Post.create[params]
+    if @post.include?
       errors.add(:title, "need to more clickbait-y")
     end
   end
