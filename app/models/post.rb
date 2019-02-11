@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
   
   def clickbait
     if expiration_date.present? && expiration_date < Date.today
-      errors.add(:expiration_date, "can't be in the past")
+      errors.add(:title, "need to more clickbait-y")
     end
   end
   
