@@ -7,9 +7,7 @@ class Post < ActiveRecord::Base
   
   
   def clickbait
-    @posts = Post.all
-    @post.each do |post| 
-      if
+    @post
       errors.add(:title, "need to more clickbait-y")
     end
   end
